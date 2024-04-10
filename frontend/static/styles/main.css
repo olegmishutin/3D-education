@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-family: Inter, sans-serif;
+    word-break: break-word;
+    text-decoration: none;
+    color: #F4F6F6;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #1C2938;
+}

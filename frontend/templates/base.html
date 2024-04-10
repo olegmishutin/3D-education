@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>3D Education</title>
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="../static/styles/header.css">
+    <script src="../static/js/modal.js" defer></script>
+</head>
+<body>
+<div class="header__padding">
+    <header class="header">
+        <a href="{% url 'index' %}" class="header__icon">
+            <img src="../static/images/icon.png" alt="site icon">
+        </a>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="">Курсы</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="">Мои курсы</a></li>
+                {% endif %}
+                <li><a href="">Материалы</a></li>
+            </ul>
+        </nav>
+        <div class="header__user">
+            {% if user.is_authenticated %}
+                <a href="{% url 'users:logout' %}" class="header__button">Выйти</a>
+            {% else %}
+                <button class="header__button" id="logButtonOpen">Войти</button>
+                <button class="header__button" id="regButtonOpen">Зарегистрироваться</button>
+            {% endif %}
+        </div>
+    </header>
+    <div class="authForm-box {% if regMessage %}authForm-box-active{% endif %}" id="authForm-reg">
+        <form class="authForm" action="{% url 'users:reg' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="first_name" placeholder="Имя" required>
+            <input type="text" name="last_name" placeholder="Фамилия" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <p>{{ regMessage }}</p>
+            <input type="submit" value="Зарегистрироваться">
+            <button type="button" id="regButtonClose">Закрыть</button>
+        </form>
+    </div>
+    <div class="authForm-box {% if logMessage %}authForm-box-active{% endif %}" id="authForm-log">
+        <form class="authForm" action="{% url 'users:log' %}" method="post">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="E-mail">
+            <input type="password" name="password" placeholder="Пароль">
+            <p>{{ logMessage }}</p>
+            <input type="submit" value="Войти">
+            <button type="button" id="logButtonClose">Закрыть</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
