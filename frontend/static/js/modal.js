@@ -8,17 +8,17 @@ const regButtonClose = document.getElementById('regButtonClose')
 const logButtonClose = document.getElementById('logButtonClose')
 
 regButtonOpen.onclick = function (){
-    regModal.className = 'authForm-box authForm-box-active'
+    regModal.className = 'authForm-box authForm-box-active authFadeinAnimation'
 }
 
 logButtonOpen.onclick = function (){
-    logModal.className = 'authForm-box authForm-box-active'
+    logModal.className = 'authForm-box authForm-box-active authFadeinAnimation'
 }
 
 regButtonClose.onclick = function (){
-    regModal.className = 'authForm-box'
+    regModal.className = 'authForm-box authFadeoutAnimation'
 }
 
 logButtonClose.onclick = function (){
-    logModal.className = 'authForm-box'
+    logModal.className = 'authForm-box authFadeoutAnimation'
 }

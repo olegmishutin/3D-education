@@ -67,6 +67,7 @@
     flex-direction: column;
     gap: 15px;
     text-align: center;
+    line-height: 25px;
     align-items: center;
 }
 
