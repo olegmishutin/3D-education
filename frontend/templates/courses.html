@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'styles/courses.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/course-card.css' %}"/>
+{% endblock %}
+{% block content %}
+    <div class="courses">
+        {% for group in groups %}
+            <h2>{{ group.name }}</h2>
+            <ul>
+                {% for course in group.courses.all %}
+                    <li class="course-card">
+                        <div class="icon">
+                            <img src="{{ course.image.url }}" alt="image">
+                        </div>
+                        <h3>{{ course.name }}</h3>
+                        <p>{{ course.description }}</p>
+                        <form action="{% url 'courses:addUserToCourse' course.id %}" method="post">
+                            {% csrf_token %}
+                            <input type="submit" value="Записаться на курс">
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}

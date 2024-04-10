@@ -20,7 +20,7 @@
         </a>
         <nav class="header__nav">
             <ul>
-                <li><a href="">Курсы</a></li>
+                <li><a href="{% url 'courses:courses' %}">Курсы</a></li>
                 {% if user.is_authenticated %}
                     <li><a href="">Мои курсы</a></li>
                 {% endif %}

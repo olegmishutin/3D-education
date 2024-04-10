@@ -1,0 +1,30 @@
+.course-card{
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #1C2938;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    border-radius: 10px;
+}
+
+.course-card input[type='submit']{
+    padding: 20px;
+    background-color: #CD3F3E;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+}
+
+.course-card .icon{
+    width: 325px;
+    min-width: 325px;
+    max-width: 325px;
+}
+
+.course-card .icon img{
+    width: 100%;
+    object-fit: cover;
+}
