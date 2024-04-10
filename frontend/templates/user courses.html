@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'styles/course-card.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/user-courses.css' %}"/>
+{% endblock %}
+{% block content %}
+    <ul class="userList">
+        {% for course in courses %}
+            <li class="course-card">
+                <div class="icon">
+                    <img src="{{ course.image.url }}" alt="image">
+                </div>
+                <h3>{{ course.name }}</h3>
+                <p>{{ course.description }}</p>
+                <a href="">Изучать</a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% if not courses %}
+        <h1>Вы не записаны ни на один курс :(</h1>
+    {% endif %}
+{% endblock %}

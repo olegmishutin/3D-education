@@ -7,10 +7,13 @@
 .content__header__image{
     min-width: 800px;
     max-width: 800px;
+    max-height: 709px;
+    min-height: 709px;
 }
 
 .content__header__image img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -69,9 +72,13 @@
 
 .content__apps li .icon{
     max-width: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
 }
 
 .content__apps li .icon img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }

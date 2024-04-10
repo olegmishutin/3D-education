@@ -7,6 +7,7 @@ BASE_DIR = SERVER_DIR.parent
 SECRET_KEY = 'django-insecure-^0vs7^pkz@q-6i%l5a&up*dw0eu(9@**bax54j1l12mrr$9$m('
 
 DEBUG = True
+LOGIN_URL = 'index'
 AUTH_USER_MODEL = 'users.User'
 
 ALLOWED_HOSTS = []

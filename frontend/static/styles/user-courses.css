@@ -1,0 +1,15 @@
+.userList{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    font-size: 64px;
+}

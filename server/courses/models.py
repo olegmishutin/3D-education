@@ -13,6 +13,7 @@ class Group(models.Model):
     def __str__(self):
         return self.name
 
+
 class Course(models.Model):
     image = models.ImageField(upload_to='courses/', verbose_name='Картинка')
     name = models.CharField(max_length=200, verbose_name='Имя')

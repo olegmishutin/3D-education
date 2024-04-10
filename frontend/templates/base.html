@@ -22,7 +22,7 @@
             <ul>
                 <li><a href="{% url 'courses:courses' %}">Курсы</a></li>
                 {% if user.is_authenticated %}
-                    <li><a href="">Мои курсы</a></li>
+                    <li><a href="{% url 'courses:myCourses' %}">Мои курсы</a></li>
                 {% endif %}
                 <li><a href="">Материалы</a></li>
             </ul>
