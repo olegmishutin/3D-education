@@ -12,5 +12,10 @@ body{
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    background-color: #1C2938;
+    background: url("../images/background.png");
+    background-attachment: fixed;
+}
+
+.content{
+    padding: 200px 200px 125px 200px;
 }
