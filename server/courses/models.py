@@ -3,7 +3,7 @@ from users.models import User
 
 
 class Group(models.Model):
-    name = models.CharField(max_length=150)
+    name = models.CharField(max_length=150, verbose_name='Название')
 
     class Meta:
         db_table = 'Group'
