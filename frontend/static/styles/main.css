@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -8,7 +8,7 @@
     color: #F4F6F6;
 }
 
-body{
+body {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
@@ -16,6 +16,18 @@ body{
     background-attachment: fixed;
 }
 
-.content{
+.content {
     padding: 200px 200px 125px 200px;
+}
+
+@media (max-width: 900px) {
+    .content {
+        padding: 200px 50px 125px 50px;
+    }
+}
+
+@media (max-width: 425px) {
+    .content {
+        padding: 250px 25px 125px 25px;
+    }
 }

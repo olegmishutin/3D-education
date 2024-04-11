@@ -24,7 +24,7 @@
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'courses:myCourses' %}">Мои курсы</a></li>
                 {% endif %}
-                <li><a href="">Материалы</a></li>
+                <li><a href="{% url 'materials:materials' %}">Материалы</a></li>
             </ul>
         </nav>
         <div class="header__user">
@@ -72,7 +72,7 @@
     <div class="footer__block">
         <p>Автор проекта: Коршунов Алексей</p>
         <p>Контактный номер администрации: +7 (666) 666-66-66</p>
-        <p>Наши e-mail адрес: educate3Dgmail.com</p>
+        <p>Наш e-mail адрес: educate3Dgmail.com</p>
     </div>
 </footer>
 </body>

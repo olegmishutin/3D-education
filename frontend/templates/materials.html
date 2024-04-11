@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'styles/user-courses.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/course-card.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/courses.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/materials.css' %}"/>
+{% endblock %}
+{% block content %}
+    <div class="courses">
+        {% if not apps and not handBooks %}
+            <h1>Пока что у нас нет материалов.</h1>
+        {% else %}
+            <h2>Приложения</h2>
+            <ul>
+                {% for app in apps %}
+                    <li class="course-card">
+                        <div class="icon">
+                            <img src="{{ app.image.url }}" alt="image">
+                        </div>
+                        <h3>{{ app.name }}</h3>
+                        <a href="{{ app.href }}">Скачать</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <h2>Справочники</h2>
+            <ul>
+                {% for handBook in handBooks %}
+                    <li class="course-card">
+                        <div class="icon">
+                            <img src="{{ handBook.image.url }}" alt="image">
+                        </div>
+                        <h3>{{ handBook.name }}</h3>
+                        {% if handBook.file %}
+                            <a href="{% url 'materials:downloadBook' handBook.id %}">Скачать</a>
+                            <a href="{{ handBook.file.url }}">Посмотреть</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}

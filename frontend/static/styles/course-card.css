@@ -1,4 +1,4 @@
-.course-card{
+.course-card {
     padding: 20px;
     box-sizing: border-box;
     background-color: #1C2938;
@@ -8,10 +8,11 @@
     text-align: center;
     gap: 15px;
     border-radius: 10px;
+    border: 1px solid #F4F6F6;
 }
 
 .course-card input[type='submit'],
-.course-card a{
+.course-card a {
     padding: 20px;
     background-color: #CD3F3E;
     border-radius: 30px;
@@ -19,8 +20,7 @@
     font-size: 16px;
 }
 
-.course-card .icon{
-    width: 325px;
+.course-card .icon {
     min-width: 325px;
     max-width: 325px;
     max-height: 190px;
@@ -29,8 +29,15 @@
     overflow: hidden;
 }
 
-.course-card .icon img{
+.course-card .icon img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media (max-width: 380px) {
+    .course-card .icon {
+        min-width: 270px;
+        max-width: 270px;
+    }
 }

@@ -6,6 +6,15 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 50px;
+    border-top: 1px solid #F4F6F6;
+    border-bottom: 1px solid #F4F6F6;
+}
+
+@media (max-width: 600px) {
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .footer__icon{

@@ -1,4 +1,4 @@
-.courses{
+.courses {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6,16 +6,17 @@
     gap: 30px;
 }
 
-.courses h2{
+.courses h2 {
     margin-top: 50px;
     font-size: 48px;
+    text-align: center;
 }
 
-.courses h2:nth-child(1){
+.courses h2:nth-child(1) {
     margin-top: 0;
 }
 
-.courses ul{
+.courses ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

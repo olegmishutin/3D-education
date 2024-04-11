@@ -1,38 +1,57 @@
-.content__header{
+.content__header {
     width: 100%;
     display: flex;
     margin-bottom: 150px;
 }
 
-.content__header__image{
-    min-width: 800px;
-    max-width: 800px;
-    max-height: 709px;
-    min-height: 709px;
+.content__header__image {
+    width: 140%;
 }
 
-.content__header__image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.content__header__block{
+.content__header__block {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
 }
 
-.content__header__block h1{
+@media (max-width: 1320px) {
+    .content__header {
+        flex-direction: column;
+    }
+
+    .content__header__image {
+        width: 100%;
+        order: 1;
+    }
+
+    .content__header__block {
+        order: 2;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.content__header__image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.content__header__block h1 {
     font-size: 64px;
 }
 
-.content__header__block h1 span{
+@media (max-width: 1620px) {
+    .content__header__block h1 {
+        font-size: 48px;
+    }
+}
+
+.content__header__block h1 span {
     color: #CD3F3E;
 }
 
-.content__header__block a{
+.content__header__block a {
     width: 200px;
     text-align: center;
     padding: 20px 0;
@@ -41,24 +60,35 @@
     border-radius: 30px;
 }
 
-.content__apps h2{
+.content__apps h2 {
     text-align: center;
     font-size: 38px;
 }
 
-.content__apps h2 span{
+@media (max-width: 600px) {
+    .content__header__block h1 {
+        font-size: 32px;
+    }
+
+    .content__apps h2 {
+        font-size: 28px;
+    }
+}
+
+.content__apps h2 span {
     color: #CD3F3E;
 }
 
-.content__apps ul{
+.content__apps ul {
     display: flex;
     gap: 20px;
     margin-top: 50px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.content__apps li{
-    min-width: 360px;
+.content__apps li {
+    width: 360px;
     background-color: #1C2938;
     border-radius: 15px;
     padding: 20px;
@@ -69,16 +99,17 @@
     text-align: center;
     line-height: 25px;
     align-items: center;
+    border: 1px solid #F4F6F6;
 }
 
-.content__apps li .icon{
+.content__apps li .icon {
     max-width: 100px;
     min-width: 100px;
     max-height: 100px;
     min-height: 100px;
 }
 
-.content__apps li .icon img{
+.content__apps li .icon img {
     width: 100%;
     height: 100%;
     object-fit: cover;
