@@ -26,5 +26,8 @@
                 {% endfor %}
             </ul>
         {% endfor %}
+        {% if not groups %}
+            <h2 class="errorText">Пока что у нас нет курсов :(</h2>
+        {% endif %}
     </div>
 {% endblock %}
