@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import FileResponse
 from .models import App, HandBook
 
@@ -10,5 +10,5 @@ def materials(request):
 
 
 def downloadBook(request, pk):
-    book = HandBook.objects.get(pk=pk)
+    book = get_object_or_404(HandBook, pk=pk)
     return FileResponse(open(book.file.path, 'rb'), as_attachment=True)

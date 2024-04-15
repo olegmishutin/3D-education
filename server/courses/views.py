@@ -1,6 +1,6 @@
 from django.views import generic
 from django.http import HttpResponse
-from django.shortcuts import redirect
+from django.shortcuts import redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Group, Course
 
@@ -19,7 +19,7 @@ class CourseGroupList(generic.ListView):
 @login_required()
 def addUserToCourse(request, pk):
     if request.method == 'POST':
-        course = Course.objects.get(pk=pk)
+        course = get_object_or_404(Course, pk=pk)
         course.users.add(request.user)
 
         return redirect('courses:myCourses')
